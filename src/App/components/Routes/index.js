@@ -31,6 +31,7 @@ export default function Routes() {
         path={ROUTES.ADMIN}
         component={Admin}
         condition={(authUser) => !!authUser && !!authUser.roles[ROLES.ADMIN]}
+        verifiedEmailRequired
         redirectTo={ROUTES.HOME}
       />
       <Route path={ROUTES.VERIFY_EMAIL} component={VerifyEmail} />

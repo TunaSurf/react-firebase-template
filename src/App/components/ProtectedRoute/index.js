@@ -12,6 +12,7 @@ import * as ROUTES from '../../../shared/constants/routes';
 // authUser => authUser.role === 'ADMIN';
 export default function ProtectedRoute({
   condition,
+  verifiedEmailRequired = false,
   redirectTo,
   path,
   ...rest
@@ -31,6 +32,7 @@ export default function ProtectedRoute({
 
   // If provider type is email/password and email has not been verified, redirect to email verification page
   if (
+    verifiedEmailRequired &&
     !authUser.emailVerified &&
     authUser.providerData
       .map((provider) => provider.providerId)
@@ -48,6 +50,7 @@ export default function ProtectedRoute({
 
 ProtectedRoute.propTypes = {
   condition: PropTypes.func.isRequired,
+  verifiedEmailRequired: PropTypes.bool,
   redirectTo: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };
