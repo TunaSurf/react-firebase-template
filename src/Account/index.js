@@ -7,7 +7,6 @@ import PasswordChangeForm from '../shared/components/forms/PasswordChangeForm';
 export default function Account() {
   const { authUser } = useAuthUser();
 
-  console.log(authUser);
   return (
     <>
       <p>Account</p>
