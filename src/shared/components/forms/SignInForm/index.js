@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
-import { useFirebase } from '../../../firebase';
+import { useFirebase } from '../../../context';
 import * as ROUTES from '../../../constants/routes';
 
 const INITIAL_STATE = {

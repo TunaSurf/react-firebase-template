@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect, useLocation } from 'react-router-dom';
 
-import { useFirebase, useAuthUser } from '../shared/firebase';
+import { useFirebase, useAuthUser } from '../shared/context';
 import * as ROUTES from '../shared/constants/routes';
 
 export default function VerifyEmail() {

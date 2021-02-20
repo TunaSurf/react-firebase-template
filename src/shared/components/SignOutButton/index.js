@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useFirebase } from '../../firebase';
+import { useFirebase } from '../../context';
 
 export default function SignOut() {
   const firebase = useFirebase();

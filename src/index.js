@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { AuthUserProvider, FirebaseProvider } from './shared/firebase';
+import {
+  AuthUserProvider,
+  FirebaseProvider,
+  ModalProvider,
+} from './shared/context';
 import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
     <FirebaseProvider>
       <AuthUserProvider>
-        <App />
+        <ModalProvider>
+          <App />
+        </ModalProvider>
       </AuthUserProvider>
     </FirebaseProvider>
   </React.StrictMode>,

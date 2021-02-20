@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useAuthUser } from '../shared/firebase';
+import { useAuthUser } from '../shared/context';
 import PasswordChangeForm from '../shared/components/forms/PasswordChangeForm';
 
 export default function Account() {

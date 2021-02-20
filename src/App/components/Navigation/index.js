@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { useAuthUser } from '../../shared/firebase';
-import * as ROUTES from '../../shared/constants/routes';
-import * as ROLES from '../../shared/constants/roles';
-import SignOutButton from '../../shared/components/SignOutButton';
+import { useAuthUser } from '../../../shared/context';
+import * as ROUTES from '../../../shared/constants/routes';
+import * as ROLES from '../../../shared/constants/roles';
+import SignOutButton from '../../../shared/components/SignOutButton';
 
 export default function Navigation() {
   const { authUser } = useAuthUser();

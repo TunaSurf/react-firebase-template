@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
-import { useFirebase } from '../../shared/firebase';
+import { useFirebase } from '../../shared/context';
 import * as ROUTES from '../../shared/constants/routes';
 
 export default function SignInGoogle() {

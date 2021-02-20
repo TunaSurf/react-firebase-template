@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect, Route } from 'react-router-dom';
 
-import { useAuthUser } from '../../shared/firebase';
-import * as ROUTES from '../../shared/constants/routes';
+import { useAuthUser } from '../../../shared/context';
+import * as ROUTES from '../../../shared/constants/routes';
 
 // Replaces route to page with a redirect if user does not meet authorization condition
 // Accepts a condition parameter which is a function in the format of the following examples:

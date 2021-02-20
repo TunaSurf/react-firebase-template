@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { useFirebase } from '../shared/firebase';
+import { useFirebase } from '../shared/context';
 
 export default function Admin() {
   const firebase = useFirebase();
