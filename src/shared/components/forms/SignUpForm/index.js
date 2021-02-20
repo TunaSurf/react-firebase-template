@@ -6,7 +6,7 @@ import * as ROLES from '../../../constants/roles';
 import * as ROUTES from '../../../constants/routes';
 
 const INITIAL_STATE = {
-  username: '',
+  displayName: '',
   email: '',
   passwordOne: '',
   passwordTwo: '',
@@ -20,12 +20,12 @@ export default function SignUpForm() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [error, setError] = useState(null);
 
-  const { username, email, passwordOne, passwordTwo } = credentials;
+  const { displayName, email, passwordOne, passwordTwo } = credentials;
   const isInvalid =
     passwordOne !== passwordTwo ||
     passwordOne === '' ||
     email === '' ||
-    username === '';
+    displayName === '';
 
   async function onSubmit(e) {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function SignUpForm() {
       await firebase.createUserWithEmailAndPassword({
         email,
         password: passwordOne,
-        username,
+        displayName,
         roles,
       });
       // User authorized and added to db successfully, send user to home page
